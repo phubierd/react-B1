@@ -1,23 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
+import HeaderStateLess from './Components/HeaderStateLess';
+import HeaderStateFull from './Components/HeaderStateFull';
+import BaiTapLayout from './Components/BaiTapLayout/BaiTapLayout';
+import DataBinding from './DataBinding/DataBinding';
+import BaiTapThucHanhLayout from './Components/BaiTapthucHanhLayout/BaiTapThucHanhLayout';
+import HandleEvent from './Components/HandleEvent/HandleEvent';
+import StateDemo from './Components/StateDemo/StateDemo';
+import BTChonXe from './Components/StateDemo/BTChonXe';
+import StyleDemo from './Components/StyleDemo/StyleDemo';
+import RenderWithMap from './Components/RenderWithMap/RenderWithMap';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <HeaderStateLess/>
+     <HeaderStateLess/> 
+     <HeaderStateLess/> 
+     <HeaderStateLess/> 
+    
+
+    <HeaderStateFull/> */}
+
+      {/* <BaiTapLayout/> */}
+
+      {/* <DataBinding/> */}
+
+      {/* <BaiTapThucHanhLayout/> */}
+
+      {/* React buổi 2 */}
+      {/* <HandleEvent/> */}
+      {/* <StateDemo/> */}
+      {/* <BTChonXe/> */}
+      {/* <StyleDemo/> */}
+      <RenderWithMap/>
+
+
+
+      
     </div>
   );
 }
