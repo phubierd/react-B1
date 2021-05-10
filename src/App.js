@@ -10,7 +10,7 @@ import StateDemo from './Components/StateDemo/StateDemo';
 import BTChonXe from './Components/StateDemo/BTChonXe';
 import StyleDemo from './Components/StyleDemo/StyleDemo';
 import RenderWithMap from './Components/RenderWithMap/RenderWithMap';
-import BTGlasses from './Components/BTGlasses/BTGlasses';
+import BTGlasses from './Components/BTGlasses/BTGlasses.jsx';
 
 
 function App() {

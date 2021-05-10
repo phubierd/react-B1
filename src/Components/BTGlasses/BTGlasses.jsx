@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
+
 export default class BTGlasses extends Component {
+
   arrProduct = [
     {
       id: 1,
@@ -10,7 +12,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-
+  
     {
       id: 2,
       price: 50,
@@ -19,7 +21,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-
+  
     {
       id: 3,
       price: 30,
@@ -28,7 +30,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-
+  
     {
       id: 4,
       price: 30,
@@ -37,7 +39,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-
+  
     {
       id: 5,
       price: 30,
@@ -46,7 +48,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-
+  
     {
       id: 6,
       price: 30,
@@ -55,7 +57,6 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-
     {
       id: 7,
       price: 30,
@@ -64,7 +65,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-
+  
     {
       id: 8,
       price: 30,
@@ -73,7 +74,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-
+  
     {
       id: 9,
       price: 30,
@@ -84,34 +85,38 @@ export default class BTGlasses extends Component {
     },
   ];
 
-  //   renderModal = () => {
-  //     return (
-  //       <div className="col-3 m-auto">
-  //         <div
-  //           className="card"
-  //           style={{
-  //             backgroundColor: "cadetblue",
-  //             borderColor: "darkblue",
-  //           }}
-  //         >
-  //           <img
-  //             className="card-img-top"
-  //             src="./img/glassesImage/model.jpg"
-  //             alt
-  //           />
-  //           <div className="card-body">
-  //             <h4 className="card-title">Title</h4>
-  //             <p className="card-text">Text</p>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     );
-  //   };
 
-  renderProduct = () => {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      glassesInfo: {
+        id: 0,
+        price: 0,
+        name: "",
+        url: "",
+        desc:""
+      }
+    }
+  }
+  
+  getGlasses = (item) =>{
+    // console.log(item)
+    this.setState({
+      ...this.state,
+      glassesInfo: {
+        id: item.id,
+        price: item.price,
+        name: item.name,
+        url:item.url,
+        desc:item.desc
+      }
+    })
+  }
+   renderProduct (){
     const arrTagJSX = this.arrProduct.map((item, index) => {
       return (
-        <a href="#" className="col-2" key={index}>
+        <a href="#" className="col-2" key={index} onClick={()=>this.getGlasses(item)}>
           <img className="w-100" src={item.url}></img>
         </a>
       );
@@ -119,7 +124,10 @@ export default class BTGlasses extends Component {
     return arrTagJSX;
   };
 
+
   render() {
+    console.log(this.state)
+
     return (
       <div className="container-fluid">
         <div className="container">
@@ -130,28 +138,40 @@ export default class BTGlasses extends Component {
                 style={{
                   backgroundColor: "cadetblue",
                   borderColor: "darkblue",
-                  width:100,
-                  height:100
+                  position:'relative',
+                  width: 250,
+                  height: 300
                 }}
               >
-                <div style={{
-                  background:"./img/glassesImage/model.jpg"
-                }}>
-                  
-                </div>
-                {/*  <img
+               
+                 <img
                    className="card-img-top"
                    src="./img/glassesImage/model.jpg"
-                   alt
-                 /> */}
-                <div className="card-body d-none">
+                   alt=""
+                   style={{
+                    position:'absolute'
+                  }}
+                 />
+                 <img
+                   className="card-img-top"
+                   src={this.state.glassesInfo.url}
+                   alt=""
+                   style={{
+                    position:'absolute',
+                    width: 150,
+                    left: 50,
+                    top: 65,
+                    opacity: 0.75
+                  }}
+                 />
+                <div className="card-body">
                   <h4 className="card-title">Title</h4>
                   <p className="card-text">Text</p>
                 </div>
               </div>
             </div>
-            <div className="col-3 m-auto">
-              {/* <div
+            {/* <div className="col-3 m-auto">
+              <div
                 className="card"
                 style={{
                   backgroundColor: "cadetblue",
@@ -167,8 +187,8 @@ export default class BTGlasses extends Component {
                   <h4 className="card-title">Title</h4>
                   <p className="card-text">Text</p>
                 </div>
-              </div> */}
-            </div>
+              </div>
+            </div> */}
           </div>
           <div className="row bg-light">{this.renderProduct()}</div>
         </div>
