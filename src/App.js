@@ -10,6 +10,7 @@ import StateDemo from './Components/StateDemo/StateDemo';
 import BTChonXe from './Components/StateDemo/BTChonXe';
 import StyleDemo from './Components/StyleDemo/StyleDemo';
 import RenderWithMap from './Components/RenderWithMap/RenderWithMap';
+import BTGlasses from './Components/BTGlasses/BTGlasses';
 
 
 function App() {
@@ -34,7 +35,8 @@ function App() {
       {/* <StateDemo/> */}
       {/* <BTChonXe/> */}
       {/* <StyleDemo/> */}
-      <RenderWithMap/>
+      {/* <RenderWithMap/> */}
+      <BTGlasses/>
 
 
 
