@@ -11,6 +11,9 @@ import BTChonXe from './Components/StateDemo/BTChonXe';
 import StyleDemo from './Components/StyleDemo/StyleDemo';
 import RenderWithMap from './Components/RenderWithMap/RenderWithMap';
 import BTGlasses from './Components/BTGlasses/BTGlasses';
+import BTQuanLyPhim from './Components/BTQuanLyPhim/BTQuanLyPhim';
+import PropsDemo from './Components/PropsDemo/PropsDemo';
+import BTDanhSachSanPham from './Components/BTDanhSachSanPham/BTDanhSachSanPham';
 
 
 function App() {
@@ -24,7 +27,7 @@ function App() {
 
     <HeaderStateFull/> */}
 
-      {/* <BaiTapLayout/> */}
+      {/* <BaiTapLayout /> */}
 
       {/* <DataBinding/> */}
 
@@ -36,11 +39,16 @@ function App() {
       {/* <BTChonXe/> */}
       {/* <StyleDemo/> */}
       {/* <RenderWithMap/> */}
-      <BTGlasses/>
+      {/* <BTGlasses/> */}
+
+      {/* Reacte buổi 3 */}
+      {/* <BTQuanLyPhim/> */}
+      {/* <PropsDemo /> */}
+      {/* quay lại bổ sung chỗ bt layout trên databiding */}
+      <BTDanhSachSanPham />
 
 
 
-      
     </div>
   );
 }
