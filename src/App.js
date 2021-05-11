@@ -10,15 +10,10 @@ import StateDemo from './Components/StateDemo/StateDemo';
 import BTChonXe from './Components/StateDemo/BTChonXe';
 import StyleDemo from './Components/StyleDemo/StyleDemo';
 import RenderWithMap from './Components/RenderWithMap/RenderWithMap';
-<<<<<<< HEAD
-import BTGlasses from './Components/BTGlasses/BTGlasses';
+import BTGlasses from './Components/BTGlasses/BTGlasses.jsx';
 import BTQuanLyPhim from './Components/BTQuanLyPhim/BTQuanLyPhim';
 import PropsDemo from './Components/PropsDemo/PropsDemo';
 import BTDanhSachSanPham from './Components/BTDanhSachSanPham/BTDanhSachSanPham';
-=======
-import BTGlasses from './Components/BTGlasses/BTGlasses.jsx';
->>>>>>> b7eeead006ac9cc40f96ecccaec75f0ace7a06e0
-
 
 function App() {
   return (
