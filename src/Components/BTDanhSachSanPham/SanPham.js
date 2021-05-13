@@ -16,6 +16,8 @@ let {item} = this.props;
                     <button type="button" className="btn btn-secondary" onClick={() => {  //nhận hàm xemChiTiet (là hàm setState từ component cha) và gọi hàm mỗi khi người dùng click
                          this.props.xemChiTiet(item) }}>Xem Chi Tiết</button>
 
+                    <button className="btn btn-warning ml-2 " onClick={()=> this.props.themGioHang(item)}>Thêm giỏ hàng</button>
+
                 </div>
             </div>
        

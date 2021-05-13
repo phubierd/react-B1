@@ -1,0 +1,57 @@
+react thêm giỏ hàng,
+
+p1: render layout giỏ hàng (giỏ hàng.js)
+
+p2:thêm button them giỏ hàng (sanpham.js)
+2.1: thêm state giorhang (BTDanhSachSP)
+
+p3: <GioHang gioHang={this.state.gioHang}/> btdanhsachSP
+p4 : 
+ renderGioHang = ()=>{
+        let{gioHang} = this.props;
+        //nhận props gioHang từ component cha {BTDanhSachSanPham} this.props.gioHang
+        return gioHang.map((item,index)=>{
+            return  <tr key={index}>
+                <td>{item.maSP}</td>
+                <td><img src={item.hinhAnh} width={50} height={50}></img></td>
+                <td>{item.tenSP}</td>
+                <td>
+                    <button className="btn btn-success">-</button>
+                    {item.soLuong}
+                    <button className="btn btn-success">+</button>
+                </td>
+                <td>{item.giaBan}</td>
+                <td>{item.giaBan * item.soLuong}</td>
+                <td><button className="btn btn-danger">Xóa</button></td>
+            </tr> 
+        })
+    }
+
+
+p5 DSSP , setstatethêmgiohang
+
+p6: //B4-p6:
+        //từ sản phẩm người dùng click tạo ra 1 object giống object trng giỏ hàng
+        const spGioHang = {...spClick,soLuong:1} //giá trị mới
+        //dựa vào sản phẩm được click thêm vào mảng giỏ hàng
+        
+        let gioHangCapNhat = this.state.gioHang;
+
+        // gioHangCapNhat.push(spGioHang);
+p7: // B4-p7: kiểm tra sản phẩm click có trong giỏ hàng hay ko
+        let index = gioHangCapNhat.findIndex(sp => sp.maSP === spClick.maSP);
+        if (index !==-1){
+            //tìm thấy
+            gioHangCapNhat[index].soLuong+= 1;
+        }else{
+            //k tìm thấy
+            gioHangCapNhat.push(spGioHang);
+        }
+
+        this.setState({
+            gioHang: gioHangCapNhat
+        })
+
+p8: xoa sp:
+
+
