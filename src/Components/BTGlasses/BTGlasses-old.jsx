@@ -12,7 +12,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-  
+
     {
       id: 2,
       price: 50,
@@ -21,7 +21,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-  
+
     {
       id: 3,
       price: 30,
@@ -30,7 +30,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-  
+
     {
       id: 4,
       price: 30,
@@ -39,7 +39,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-  
+
     {
       id: 5,
       price: 30,
@@ -48,7 +48,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-  
+
     {
       id: 6,
       price: 30,
@@ -65,7 +65,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-  
+
     {
       id: 8,
       price: 30,
@@ -74,7 +74,7 @@ export default class BTGlasses extends Component {
       desc:
         "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
     },
-  
+
     {
       id: 9,
       price: 30,
@@ -87,7 +87,7 @@ export default class BTGlasses extends Component {
 
 
 
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       glassesInfo: {
@@ -95,12 +95,12 @@ export default class BTGlasses extends Component {
         price: 0,
         name: "",
         url: "",
-        desc:""
+        desc: ""
       }
     }
   }
-  
-  getGlasses = (item) =>{
+
+  getGlasses = (item) => {
     // console.log(item)
     this.setState({
       ...this.state,
@@ -108,15 +108,15 @@ export default class BTGlasses extends Component {
         id: item.id,
         price: item.price,
         name: item.name,
-        url:item.url,
-        desc:item.desc
+        url: item.url,
+        desc: item.desc
       }
     })
   }
-   renderProduct (){
+  renderProduct() {
     const arrTagJSX = this.arrProduct.map((item, index) => {
       return (
-        <a href="#" className="col-2" key={index} onClick={()=>this.getGlasses(item)}>
+        <a href="#" className="col-2" key={index} onClick={() => this.getGlasses(item)}>
           <img className="w-100" src={item.url}></img>
         </a>
       );
@@ -138,32 +138,32 @@ export default class BTGlasses extends Component {
                 style={{
                   backgroundColor: "cadetblue",
                   borderColor: "darkblue",
-                  position:'relative',
+                  position: 'relative',
                   width: 250,
                   height: 300
                 }}
               >
-               
-                 <img
-                   className="card-img-top"
-                   src="./img/glassesImage/model.jpg"
-                   alt=""
-                   style={{
-                    position:'absolute'
+
+                <img
+                  className="card-img-top"
+                  src="./img/glassesImage/model.jpg"
+                  alt=""
+                  style={{
+                    position: 'absolute'
                   }}
-                 />
-                 <img
-                   className="card-img-top"
-                   src={this.state.glassesInfo.url}
-                   alt=""
-                   style={{
-                    position:'absolute',
+                />
+                <img
+                  className="card-img-top"
+                  src={this.state.glassesInfo.url}
+                  alt=""
+                  style={{
+                    position: 'absolute',
                     width: 150,
                     left: 50,
                     top: 65,
                     opacity: 0.75
                   }}
-                 />
+                />
                 <div className="card-body">
                   <h4 className="card-title">Title</h4>
                   <p className="card-text">Text</p>
