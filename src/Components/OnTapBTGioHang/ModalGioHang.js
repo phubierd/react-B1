@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class ModalGioHang extends Component {
     render() {
         let { gioHang } = this.props;
-
+        let {xoaGioHang} = this.props
         return (
 
             <div className="modal fade" id="modelId" tabIndex={-1} role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -25,7 +25,7 @@ export default class ModalGioHang extends Component {
                                         <td>So Luong</td>
                                         <td>Don Gia</td>
                                         <td>Thanh Tien</td>
-                                        <td></td>
+                                       
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -37,6 +37,7 @@ export default class ModalGioHang extends Component {
                                         <td>{spGH.soLuong}</td>
                                         <td>{spGH.giaBan.toLocaleString()}</td>
                                         <td>{(spGH.soLuong * spGH.giaBan).toLocaleString()}</td>
+                                        <td><button className="btn btn-danger" onClick={()=>{this.props.xoaGioHang(spGH.maSP)}}>Xoa</button></td>
                                        </tr>
                                    })}
                                 </tbody>

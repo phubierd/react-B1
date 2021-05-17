@@ -47,29 +47,81 @@ export default class OnTapBTGioHang extends Component {
 
     state = {
         gioHang: [
-            {
-                "maSP": 3,
-                "tenSP": "Iphone XS Max",
-                "giaBan": 27000000,
-                "hinhAnh": "./img/applephone.jpg",
-                "soLuong":1
+            // {
+            //     "maSP": 3,
+            //     "tenSP": "Iphone XS Max",
+            //     "giaBan": 27000000,
+            //     "hinhAnh": "./img/applephone.jpg",
+            //     "soLuong": 1
 
-            }
+            // }
         ]
+    }
+
+    //lấy dữ liệu tại component OnTapBTGioHang
+    themGioHang = (spChon) => {
+        console.log(spChon)
+        //b1: từ sp dc chọn tạo ra sp giỏ hàng
+        let spGioHang = {
+            "maSP": spChon.maSP,
+            "tenSP": spChon.tenSP,
+            "giaBan": spChon.giaBan,
+            "hinhAnh": spChon.hinhAnh,
+            "soLuong": 1,
+        }
+        //Part 3
+        //kiem tra spChon cos trong gio hang ko?
+        let gioHangCapNhat =[...this.state.gioHang];
+        let index = gioHangCapNhat.findIndex(sp=>sp.maSP === spGioHang.maSP)
+        if(index!==-1){
+            //san pham duoc click co san trong this.state.gioHang
+            console.log('index if',index)
+            gioHangCapNhat[index].soLuong +=1;
+            console.log( 'giohangindex',gioHangCapNhat[index])
+        }else{
+            //san pham duoc lcick chua co trong this.state.gioHang
+            console.log('index else',index)
+            gioHangCapNhat.push(spGioHang)
+        }
+
+        //set state de component render lai
+        this.setState({
+            gioHang: gioHangCapNhat,
+        })
+    }
+
+    //Part 4
+    //đặt sự kiện xóa giỏ hàng
+    xoaGioHang =(maSP)=>{
+        //tìm trong giỏ hafngh có sp chứa maSP dc click thi xóa
+        // let gioHangCapNhat = [...this.state.gioHang];
+        // let index = gioHangCapNhat.findIndex(sp => sp.maSP === maSP);
+        // if (index !== -1){
+        //     gioHangCapNhat.splice(index,1);
+        // }
+        // //cap nhat lai state gio hang va render giao dien
+        // this.setState({
+        //     gioHang:gioHangCapNhat
+        // })
+
+        let gioHangCapNhat = this.state.gioHang.filter(sp => sp.maSP !== maSP)
+        this.setState({
+            gioHang:gioHangCapNhat
+        })
     }
 
     render() {
 
-        let tongSoLuong = this.state.gioHang.reduce((tongSoLuong,spGH,index)=>{
-            return tongSoLuong+= spGH.soLuong;
-        },0)
+        let tongSoLuong = this.state.gioHang.reduce((tongSoLuong, spGH, index) => {
+            return tongSoLuong += spGH.soLuong;
+        }, 0)
 
         return (
             <div className="container">
                 <h3 className="text-center text-success">Bai Tap Gio Hang</h3>
-                <ModalGioHang gioHang={this.state.gioHang}/>
+                <ModalGioHang gioHang={this.state.gioHang} xoaGioHang={this.xoaGioHang} />
                 <div className="text-right"><span className="text-danger" style={{ cursor: 'pointer', fontSize: "17px", fontWeight: "bold" }} data-toggle="modal" data-target="#modelId">Gio Hang({tongSoLuong})</span></div>
-                <DanhSachSPGioHang item={this.dataProduct} />
+                <DanhSachSPGioHang item={this.dataProduct} themGioHang={this.themGioHang} />
             </div>
         )
     }
