@@ -17,6 +17,7 @@ import BTDanhSachSanPham from './Components/BTDanhSachSanPham/BTDanhSachSanPham'
 import OnTap125 from './Components/ontap125/OnTap125';
 import GioHang from './Components/BTDanhSachSanPham/GioHang';
 import OnTapBTGioHang from './Components/OnTapBTGioHang/OnTapBTGioHang';
+import DanhSachSanPhamRedux from './ReduxDemo/BTGioHangRedux/DanhSachSanPhamRedux';
 
 function App() {
   return (
@@ -51,7 +52,10 @@ function App() {
       {/* <BTDanhSachSanPham /> */}
       {/* <OnTap125/> */}
       {/* <react buoi 4 gio hàng, làm tiếp bt danh sách sp> */}
-      <OnTapBTGioHang/>
+      {/* <OnTapBTGioHang/> */}
+
+      {/* //reacte buoi 5: Redux */}
+      <DanhSachSanPhamRedux/>
 
       
       
