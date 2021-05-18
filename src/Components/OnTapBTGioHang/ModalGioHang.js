@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class ModalGioHang extends Component {
     render() {
         let { gioHang } = this.props;
-        let {xoaGioHang} = this.props
+        let {xoaGioHang,tangGiamSoLuong} = this.props
         return (
 
             <div className="modal fade" id="modelId" tabIndex={-1} role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -34,13 +34,32 @@ export default class ModalGioHang extends Component {
                                         <td>{spGH.maSP}</td>
                                         <td><img src={spGH.hinhAnh} width={50} height={50}/></td>
                                         <td>{spGH.tenSP}</td>
-                                        <td>{spGH.soLuong}</td>
+                                        <td>
+                                            <button className="btn btn-info" onClick={()=>{
+                                                this.props.tangGiamSoLuong(spGH.maSP,false)
+                                            }}>-</button>
+                                            {spGH.soLuong}
+                                            <button className="btn btn-info" onClick={()=>{
+                                                this.props.tangGiamSoLuong(spGH.maSP,true)
+                                            }}>+</button>
+                                            </td>
                                         <td>{spGH.giaBan.toLocaleString()}</td>
                                         <td>{(spGH.soLuong * spGH.giaBan).toLocaleString()}</td>
                                         <td><button className="btn btn-danger" onClick={()=>{this.props.xoaGioHang(spGH.maSP)}}>Xoa</button></td>
                                        </tr>
                                    })}
                                 </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colSpan="5"></td>
+                                        <td>Tổng tiền</td>
+                                        <td>
+                                            {this.props.gioHang.reduce((tongTien,spGioHang,index)=>{
+                                                return tongTien+=spGioHang.soLuong * spGioHang.giaBan
+                                            },0).toLocaleString()}
+                                        </td>
+                                    </tr>
+                                </tfoot>
 
                             </table>
                         </div>
