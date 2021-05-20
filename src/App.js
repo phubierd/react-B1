@@ -18,6 +18,7 @@ import OnTap125 from './Components/ontap125/OnTap125';
 import GioHang from './Components/BTDanhSachSanPham/GioHang';
 import OnTapBTGioHang from './Components/OnTapBTGioHang/OnTapBTGioHang';
 import DanhSachSanPhamRedux from './ReduxDemo/BTGioHangRedux/DanhSachSanPhamRedux';
+import BTGameXucXac from './ReduxDemo/BTGameXucXac/BTGameXucXac';
 
 function App() {
   return (
@@ -55,7 +56,10 @@ function App() {
       {/* <OnTapBTGioHang/> */}
 
       {/* //reacte buoi 5: Redux */}
-      <DanhSachSanPhamRedux/>
+      {/* <DanhSachSanPhamRedux/> */}
+
+      {/* //react buoi6: game xuc xac */}
+      <BTGameXucXac/>
 
       
       
