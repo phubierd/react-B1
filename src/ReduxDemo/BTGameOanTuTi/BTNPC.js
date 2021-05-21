@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class KQTroChoi extends Component {
+export default class BTNPC extends Component {
     render() {
         return (
             <div>
-                
+                123
             </div>
         )
     }

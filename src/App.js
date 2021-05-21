@@ -19,6 +19,7 @@ import GioHang from './Components/BTDanhSachSanPham/GioHang';
 import OnTapBTGioHang from './Components/OnTapBTGioHang/OnTapBTGioHang';
 import DanhSachSanPhamRedux from './ReduxDemo/BTGioHangRedux/DanhSachSanPhamRedux';
 import BTGameXucXac from './ReduxDemo/BTGameXucXac/BTGameXucXac';
+import BTGameOanTuTi from './ReduxDemo/BTGameOanTuTi/BTGameOanTuTi';
 
 function App() {
   return (
@@ -59,8 +60,8 @@ function App() {
       {/* <DanhSachSanPhamRedux/> */}
 
       {/* //react buoi6: game xuc xac */}
-      <BTGameXucXac/>
-
+      {/* <BTGameXucXac/> */}
+      <BTGameOanTuTi/>
       
       
 
