@@ -1,5 +1,6 @@
 import { combineReducers, createStore } from 'redux';
 import {baiTapGameXucXacReducer} from './reducers/baiTapGameXucXacReducer'
+import {BTGameOanTuTiReducer} from './reducers/BTGameOanTuTiReducer'
 const stateDefault = [
     {
         "maSP": 1,
@@ -73,7 +74,7 @@ const rootReducer = combineReducers({
 
 
     // baiTapGameXucXacReducer:baiTapGameXucXacReducer
-    baiTapGameXucXacReducer
+    baiTapGameXucXacReducer,
     // baiTapGameXucXacReducer: (state = stateDefaultGame, action) => {
     //     console.log('action XucXac', action)
 
@@ -117,6 +118,9 @@ const rootReducer = combineReducers({
 
     //     return state;
     // }
+
+
+    BTGameOanTuTiReducer,
 });
 
 export const store = createStore(rootReducer);

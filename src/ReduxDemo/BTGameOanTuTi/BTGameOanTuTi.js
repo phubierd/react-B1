@@ -3,11 +3,11 @@ import style from '../../assets/styles/component/BTGameOanTuTi.module.css'
 import BTNPC from './BTNPC'
 import BTPlayer from './BTPlayer'
 import KQTroChoiOanTuTi from './KQTroChoiOanTuTi'
+import {connect} from 'react-redux'
 
 
 
-
-export default class BTGameOanTuTi extends Component {
+ class BTGameOanTuTi extends Component {
     render() {
         return (
             <div className={`${style.bgGame}`}>
@@ -18,7 +18,25 @@ export default class BTGameOanTuTi extends Component {
                     </div>
                     <div className="col-4">
                         <KQTroChoiOanTuTi/>
-                        <button className="btn btn-info">PlayGame!!!</button>
+                        <button className="btn btn-info" onClick={()=>{
+
+                            let count = 1;
+                            let randomNPCItem = setInterval(()=>{
+                                const action = {
+                                    type: 'NPC_RANDOM'
+                                }
+                                count++;
+                                if (count >=20){
+                                    clearInterval(randomNPCItem)
+                                }
+                                this.props.dispatch(action)
+                            },100)
+
+                            // const action = {
+                            //     type: 'NPC_RANDOM'
+                            // }
+                            // this.props.dispatch(action)
+                        }}>PlayGame!!!</button>
                     </div>
                     <div className="col-4">
                         <BTNPC/>
@@ -28,3 +46,6 @@ export default class BTGameOanTuTi extends Component {
         )
     }
 }
+
+
+export default connect (null)(BTGameOanTuTi)

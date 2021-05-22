@@ -14,7 +14,10 @@
 	border-radius: .4em;
 	
 }
-
+.btnItem{
+	width: 100px;
+	height: 100px;
+}
 .speechBubble:after {
 	content: '';
 	position: absolute;
