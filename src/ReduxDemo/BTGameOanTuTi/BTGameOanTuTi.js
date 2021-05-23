@@ -22,15 +22,23 @@ import {connect} from 'react-redux'
 
                             let count = 1;
                             let randomNPCItem = setInterval(()=>{
-                                const action = {
+                                let action = {
                                     type: 'NPC_RANDOM'
                                 }
                                 count++;
-                                if (count >=20){
+                                if (count >=10){
                                     clearInterval(randomNPCItem)
+
+                                    let action = {
+                                        type: 'END_GAME'
+
+                                    }
+                                    this.props.dispatch(action)
+                                    
                                 }
                                 this.props.dispatch(action)
                             },100)
+
 
                             // const action = {
                             //     type: 'NPC_RANDOM'
