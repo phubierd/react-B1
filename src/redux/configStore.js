@@ -1,6 +1,7 @@
 import { combineReducers, createStore } from 'redux';
 import {baiTapGameXucXacReducer} from './reducers/baiTapGameXucXacReducer'
 import {BTGameOanTuTiReducer} from './reducers/BTGameOanTuTiReducer'
+import {quanLySinhVienReducer} from './reducers/quanLySinhVienReducer'
 const stateDefault = [
     {
         "maSP": 1,
@@ -121,6 +122,7 @@ const rootReducer = combineReducers({
 
 
     BTGameOanTuTiReducer,
+    quanLySinhVienReducer,
 });
 
 export const store = createStore(rootReducer);
