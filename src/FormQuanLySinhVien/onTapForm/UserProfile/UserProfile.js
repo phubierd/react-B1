@@ -69,6 +69,11 @@ export default class UserProfile extends Component {
 
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col-12">
+                                <button className="btn btn-info text-center w-100">Submit</button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
