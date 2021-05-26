@@ -21,6 +21,7 @@ import DanhSachSanPhamRedux from './ReduxDemo/BTGioHangRedux/DanhSachSanPhamRedu
 import BTGameXucXac from './ReduxDemo/BTGameXucXac/BTGameXucXac';
 import BTGameOanTuTi from './ReduxDemo/BTGameOanTuTi/BTGameOanTuTi';
 import FormQuanLySinhVien from './FormQuanLySinhVien/FormQuanLySinhVien';
+import UserProfile from './FormQuanLySinhVien/onTapForm/UserProfile/UserProfile';
 
 function App() {
   return (
@@ -65,7 +66,8 @@ function App() {
       {/* <BTGameOanTuTi/> */}
 
       {/* react buoi7 : form */}
-      <FormQuanLySinhVien/>
+      {/* <FormQuanLySinhVien/> */}
+      <UserProfile/>
       
       
 
