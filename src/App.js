@@ -22,6 +22,8 @@ import BTGameXucXac from './ReduxDemo/BTGameXucXac/BTGameXucXac';
 import BTGameOanTuTi from './ReduxDemo/BTGameOanTuTi/BTGameOanTuTi';
 import FormQuanLySinhVien from './FormQuanLySinhVien/FormQuanLySinhVien';
 import UserProfile from './FormQuanLySinhVien/onTapForm/UserProfile/UserProfile';
+import LifeCycleReact from './LifeCycleReact/LifeCycleReact';
+import Api from './API/Api';
 
 function App() {
   return (
@@ -67,7 +69,11 @@ function App() {
 
       {/* react buoi7 : form */}
       {/* <FormQuanLySinhVien/> */}
-      <UserProfile/>
+      {/* <UserProfile/> */}
+
+      {/* react buoi 8: life cycle */}
+      {/* <LifeCycleReact/> */}
+      <Api/>
       
       
 

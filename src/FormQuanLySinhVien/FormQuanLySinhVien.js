@@ -101,8 +101,18 @@ import {connect} from 'react-redux'
         this.props.dispatch(action)
     }
 
+
+    componentWillReceiveProps(newProps){//props mới this.props(trước khi thay đổi), newProps (sau khi thay đổi)
+        //khi người dùng bấm nút chỉnh sửa => đem props mới từ reduxx về và gán cho state
+        this.setState({
+            values:newProps.sinhVienSua
+        });
+
+    }
+
+
     render() {
-        let {maSinhVien,tenSinhVien,soDienThoai,email} = this.props.sinhVienSua
+        let {maSinhVien,tenSinhVien,soDienThoai,email} = this.state.values     //this.props.sinhVienSua 
         
         return (
             <div className="container">
