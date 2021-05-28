@@ -69,11 +69,11 @@ function App() {
 
       {/* react buoi7 : form */}
       {/* <FormQuanLySinhVien/> */}
-      {/* <UserProfile/> */}
+      <UserProfile/>
 
       {/* react buoi 8: life cycle */}
       {/* <LifeCycleReact/> */}
-      <Api/>
+      {/* <Api/> */}
       
       
 
