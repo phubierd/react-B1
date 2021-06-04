@@ -24,6 +24,7 @@ import FormQuanLySinhVien from './FormQuanLySinhVien/FormQuanLySinhVien';
 import UserProfile from './FormQuanLySinhVien/onTapForm/UserProfile/UserProfile';
 import LifeCycleReact from './LifeCycleReact/LifeCycleReact';
 import Api from './API/Api';
+import FormQuanLySV from './FormQuanLySinhVien/onTapForm/FormQuanLySV';
 
 function App() {
   return (
@@ -69,7 +70,7 @@ function App() {
 
       {/* react buoi7 : form */}
       {/* <FormQuanLySinhVien/> */}
-      <UserProfile/>
+      <FormQuanLySV/>
 
       {/* react buoi 8: life cycle */}
       {/* <LifeCycleReact/> */}

@@ -1,6 +1,7 @@
 import { combineReducers, createStore } from 'redux';
 import {baiTapGameXucXacReducer} from './reducers/baiTapGameXucXacReducer'
 import {BTGameOanTuTiReducer} from './reducers/BTGameOanTuTiReducer'
+import { onTapFormQLSVReducer } from './reducers/onTapFormQLSV';
 import {quanLySinhVienReducer} from './reducers/quanLySinhVienReducer'
 const stateDefault = [
     {
@@ -123,6 +124,7 @@ const rootReducer = combineReducers({
 
     BTGameOanTuTiReducer,
     quanLySinhVienReducer,
+    onTapFormQLSVReducer,
 });
 
 export const store = createStore(rootReducer);
