@@ -70,10 +70,10 @@ function App() {
 
       {/* react buoi7 : form */}
       {/* <FormQuanLySinhVien/> */}
-      <FormQuanLySV/>
+      {/* <FormQuanLySV/> */}
 
       {/* react buoi 8: life cycle */}
-      {/* <LifeCycleReact/> */}
+      <LifeCycleReact/>
       {/* <Api/> */}
       
       
